@@ -86,7 +86,9 @@ public class Logic1
     public boolean old35(int n) {
         if (n%3 == 0||n%5==0)
         {
-            return true;
+            if(n%3==0 && n%5==0)return false;
+            
+            else return true;
         }
         else
         {
@@ -157,7 +159,7 @@ public class Logic1
     nearTen(17) --> false
     nearTen(19) --> true */
     public boolean nearTen(int num) {
-      if (num%10 == 2 || num%2 == 8)
+      if (num%10 <= 2 || num%10 >= 8)
       {
           return true;
       }
@@ -177,14 +179,14 @@ public class Logic1
     sortaSum(9, 4) --> 20
     sortaSum(10, 11) --> 21*/
     public int sortaSum(int a, int b) {
-      int c = 20;
-      if (a+b>=10 && a+b<=19)
+      
+      if (a+b<=10 || a+b>=19)
       {
           return a+b;
       }
       else
       {
-          return c;
+          return 20;
       }
     }
 
